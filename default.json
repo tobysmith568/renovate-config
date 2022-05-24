@@ -1,10 +1,11 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base", ":disableDependencyDashboard", ":preserveSemverRanges", "npm:unpublishSafe"],
   "automergeType": "branch",
   "packageRules": [
     {
-      "groupName": "Auto-merge",
-      "matchPackagePatterns": ["eslint", "cspell", "prettier"],
+      "groupName": "npm auto-merge",
+      "matchPackagePatterns": ["eslint", "cspell", "prettier", "typescript", "jest", "cypress", "testing-library"],
       "automerge": true
     }
   ]

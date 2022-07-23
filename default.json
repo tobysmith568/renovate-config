@@ -11,13 +11,14 @@
     {
       "groupName": "npm auto-merge",
       "matchPackagePatterns": [
-        "eslint",
         "cspell",
-        "prettier",
-        "typescript",
-        "jest",
         "cypress",
-        "testing-library"
+        "eslint",
+        "jest",
+        "^next$",
+        "prettier",
+        "testing-library",
+        "typescript"
       ],
       "automerge": true
     },

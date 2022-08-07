@@ -9,16 +9,30 @@
   "automergeType": "branch",
   "packageRules": [
     {
-      "groupName": "npm auto-merge",
+      "groupName": "npm auto-merge (linting)",
       "matchPackagePatterns": [
         "cspell",
-        "cypress",
         "eslint",
-        "jest",
+        "prettier"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "npm auto-merge (development)",
+      "matchPackagePatterns": [
+        "^@types/react$",
         "^next$",
-        "prettier",
-        "testing-library",
-        "typescript"
+        "^react$",
+        "^typescript$"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "npm auto-merge (testing)",
+      "matchPackagePatterns": [
+        "cypress",
+        "jest",
+        "testing-library"
       ],
       "automerge": true
     },

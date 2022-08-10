@@ -9,6 +9,12 @@
   "automergeType": "branch",
   "packageRules": [
     {
+      "groupName": "node",
+      "matchPackagePatterns": ["^@types/node$", "^node$"],
+      "allowedVersions": "^16",
+      "automerge": true
+    },
+    {
       "groupName": "npm auto-merge (linting)",
       "matchPackagePatterns": [
         "cspell",
@@ -35,11 +41,6 @@
         "testing-library"
       ],
       "automerge": true
-    },
-    {
-      "groupName": "node",
-      "matchPackagePatterns": ["^@types/node$", "^node$"],
-      "allowedVersions": "^16"
     }
   ]
 }

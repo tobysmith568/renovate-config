@@ -41,6 +41,23 @@
         "testing-library"
       ],
       "automerge": true
+    },
+    {
+      "groupName": "NuGet auto-merge (Microsoft)",
+      "matchPackagePatterns": [
+        "^Microsoft\\.Extensions\\.",
+        "^Microsoft\\.AspNetCore\\.",
+        "Microsoft\\.NET\\.Test\\.Sdk"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "NuGet auto-merge (NUnit)",
+      "matchPackagePatterns": [
+        "^NUnit$",
+        "^NUnit3TestAdapter$"
+      ],
+      "automerge": true
     }
   ]
 }

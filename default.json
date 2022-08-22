@@ -54,9 +54,9 @@
     {
       "groupName": "NuGet auto-merge (Microsoft)",
       "matchPackagePatterns": [
-        "^Microsoft\.Extensions\.",
-        "^Microsoft\.AspNetCore\.",
-        "Microsoft\.NET\.Test\.Sdk"
+        "^Microsoft\\.Extensions\\.",
+        "^Microsoft\\.AspNetCore\\.",
+        "Microsoft\\.NET\\.Test\\.Sdk"
       ],
       "automerge": true
     },

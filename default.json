@@ -38,7 +38,7 @@
         "^next$",
         "^nx$",
         "^react$",
-        "^typescript$",
+        "^typescript$"
       ],
       "automerge": true
     },

@@ -24,7 +24,7 @@
         "^@prettier\/",
         "^cspell$",
         "^eslint$",
-        "^eslint-plugin"
+        "^eslint-plugin",
         "^prettier$",
         "^prettier-plugin"
       ],
@@ -33,7 +33,7 @@
     {
       "groupName": "npm auto-merge (development)",
       "matchPackagePatterns": [
-        "^@nrwl\/"
+        "^@nrwl\/",
         "^@types/react$",
         "^next$",
         "^nx$",

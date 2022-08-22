@@ -17,19 +17,28 @@
     {
       "groupName": "npm auto-merge (linting)",
       "matchPackagePatterns": [
-        "cspell",
-        "eslint",
-        "prettier"
+        "^@.*?\/prettier-plugin",
+        "^@.*?\/eslint-plugin",
+        "^@cspell\/dict",
+        "^@eslint\/",
+        "^@prettier\/",
+        "^cspell$",
+        "^eslint$",
+        "^eslint-plugin"
+        "^prettier$",
+        "^prettier-plugin"
       ],
       "automerge": true
     },
     {
       "groupName": "npm auto-merge (development)",
       "matchPackagePatterns": [
+        "^@nrwl\/"
         "^@types/react$",
         "^next$",
+        "^nx$",
         "^react$",
-        "^typescript$"
+        "^typescript$",
       ],
       "automerge": true
     },
@@ -45,9 +54,9 @@
     {
       "groupName": "NuGet auto-merge (Microsoft)",
       "matchPackagePatterns": [
-        "^Microsoft\\.Extensions\\.",
-        "^Microsoft\\.AspNetCore\\.",
-        "Microsoft\\.NET\\.Test\\.Sdk"
+        "^Microsoft\.Extensions\.",
+        "^Microsoft\.AspNetCore\.",
+        "Microsoft\.NET\.Test\.Sdk"
       ],
       "automerge": true
     },

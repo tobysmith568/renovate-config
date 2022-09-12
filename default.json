@@ -19,12 +19,14 @@
       "matchPackagePatterns": [
         "^@.*?\/prettier-plugin",
         "^@.*?\/eslint-plugin",
+        "^@.*?\/eslint-config",
         "^@cspell\/dict",
         "^@eslint\/",
         "^@prettier\/",
         "^cspell$",
         "^eslint$",
         "^eslint-plugin",
+        "^eslint-config",
         "^prettier$",
         "^prettier-plugin"
       ],

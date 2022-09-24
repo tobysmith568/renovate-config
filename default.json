@@ -69,13 +69,13 @@
         "^NUnit3TestAdapter$"
       ],
       "automerge": true
-    }
+    },
     {
       "groupName": "GitHub Actions auto-merge",
       "matchPackagePatterns": [
         "^codecov/codecov-action$",
       ],
       "automerge": true
-    },
+    }
   ]
 }

@@ -35,7 +35,6 @@
     {
       "groupName": "npm auto-merge (development)",
       "matchPackagePatterns": [
-        "^@nrwl\/",
         "^@types/react$",
         "^next$",
         "^react$",

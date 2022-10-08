@@ -73,7 +73,8 @@
     {
       "groupName": "GitHub Actions auto-merge",
       "matchPackagePatterns": [
-        "^codecov/codecov-action$",
+        "^actions/setup-dotnet$",
+        "^codecov/codecov-action$"
       ],
       "automerge": true
     }

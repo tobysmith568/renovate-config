@@ -11,7 +11,7 @@
     {
       "groupName": "node",
       "matchPackagePatterns": ["^@types/node$", "^node$"],
-      "allowedVersions": "^16",
+      "allowedVersions": "^18",
       "automerge": true
     },
     {

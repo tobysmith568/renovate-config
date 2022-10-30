@@ -35,7 +35,7 @@
     {
       "groupName": "npm auto-merge (development)",
       "matchPackagePatterns": [
-        "^@types/react$",
+        "^@types\/react$",
         "^next$",
         "^react$",
         "^typescript$"
@@ -75,6 +75,14 @@
         "^codecov/codecov-action$"
       ],
       "automerge": true
+    },
+    {
+      "groupName": "Disable Nx monorepos",
+      "matchPackagePatterns": [
+        "^nx$",
+        "^@nrwl\/"
+      ],
+      "enabled": false
     }
   ]
 }

@@ -61,10 +61,11 @@
       "automerge": true
     },
     {
-      "groupName": "NuGet auto-merge (NUnit)",
+      "groupName": "NuGet auto-merge (Testing)",
       "matchPackagePatterns": [
         "^NUnit$",
-        "^NUnit3TestAdapter$"
+        "^NUnit3TestAdapter$",
+        "^coverlet\.collector$"
       ],
       "automerge": true
     },

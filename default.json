@@ -7,7 +7,7 @@
   ],
   "automergeType": "branch",
   "stabilityDays": 3,
-  "stopUpdatingLabel": "parked"
+  "stopUpdatingLabel": "parked",
   "packageRules": [
     {
       "groupName": "node",

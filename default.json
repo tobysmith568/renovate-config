@@ -64,6 +64,7 @@
     {
       "groupName": "NuGet auto-merge (Testing)",
       "matchPackagePatterns": [
+        "^FluentAssertions$",
         "^NUnit$",
         "^NUnit3TestAdapter$",
         "^coverlet\.collector$"

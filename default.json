@@ -83,6 +83,7 @@
       "groupName": "Disable Nx monorepos",
       "matchPackagePatterns": [
         "^nx$",
+        "^@nx\/",
         "^@nrwl\/"
       ],
       "enabled": false

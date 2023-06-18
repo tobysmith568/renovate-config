@@ -3,28 +3,90 @@
   "extends": [
     "config:base",
     ":disableDependencyDashboard",
-    ":preserveSemverRanges",
-    "npm:unpublishSafe"
+    ":preserveSemverRanges"
   ],
   "automergeType": "branch",
+  "stabilityDays": 3,
+  "stopUpdatingLabel": "parked",
   "packageRules": [
     {
-      "groupName": "npm auto-merge",
+      "groupName": "node",
+      "matchPackagePatterns": ["^@types/node$", "^node$"],
+      "allowedVersions": "^18",
+      "automerge": true
+    },
+    {
+      "groupName": "npm auto-merge (linting)",
       "matchPackagePatterns": [
-        "eslint",
-        "cspell",
-        "prettier",
-        "typescript",
-        "jest",
+        "^@.*?\/prettier-plugin",
+        "^@.*?\/eslint-plugin",
+        "^@.*?\/eslint-config",
+        "^@cspell\/dict",
+        "^@eslint\/",
+        "^@prettier\/",
+        "^cspell$",
+        "^eslint$",
+        "^eslint-plugin",
+        "^eslint-config",
+        "^prettier$",
+        "^prettier-plugin"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "npm auto-merge (development)",
+      "matchPackagePatterns": [
+        "^@types\/react$",
+        "^next$",
+        "^react$",
+        "^typescript$"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "npm auto-merge (testing)",
+      "matchPackagePatterns": [
         "cypress",
+        "jest",
         "testing-library"
       ],
       "automerge": true
     },
     {
-      "groupName": "node",
-      "matchPackagePatterns": ["^@types/node$", "^node$"],
-      "allowedVersions": "^16"
+      "groupName": "NuGet auto-merge (Microsoft)",
+      "matchPackagePatterns": [
+        "^Microsoft\\.Extensions\\.",
+        "^Microsoft\\.AspNetCore\\.",
+        "Microsoft\\.NET\\.Test\\.Sdk"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "NuGet auto-merge (Testing)",
+      "matchPackagePatterns": [
+        "^FluentAssertions$",
+        "^NUnit$",
+        "^NUnit3TestAdapter$",
+        "^coverlet\.collector$"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "GitHub Actions auto-merge",
+      "matchPackagePatterns": [
+        "^actions/setup-dotnet$",
+        "^codecov/codecov-action$"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "Disable Nx monorepos",
+      "matchPackagePatterns": [
+        "^nx$",
+        "^@nx\/",
+        "^@nrwl\/"
+      ],
+      "enabled": false
     }
   ]
 }

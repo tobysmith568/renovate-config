@@ -1,10 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base",
-    ":disableDependencyDashboard",
-    ":preserveSemverRanges"
-  ],
+  "extends": ["config:recommended", ":disableDependencyDashboard", ":preserveSemverRanges"],
   "automergeType": "branch",
   "stabilityDays": 3,
   "stopUpdatingLabel": "parked",
@@ -18,13 +14,13 @@
     {
       "groupName": "npm auto-merge (linting)",
       "matchPackagePatterns": [
-        "^@.*?\/prettier-plugin",
-        "^@.*?\/eslint-plugin",
-        "^@.*?\/eslint-config",
-        "^@cspell\/dict",
-        "^@eslint\/",
-        "^@prettier\/",
-        "^@typescript-eslint\/",
+        "^@.*?/prettier-plugin",
+        "^@.*?/eslint-plugin",
+        "^@.*?/eslint-config",
+        "^@cspell/dict",
+        "^@eslint/",
+        "^@prettier/",
+        "^@typescript-eslint/",
         "^cspell$",
         "^eslint$",
         "^eslint-plugin",
@@ -36,21 +32,12 @@
     },
     {
       "groupName": "npm auto-merge (development)",
-      "matchPackagePatterns": [
-        "^@types\/react$",
-        "^next$",
-        "^react$",
-        "^typescript$"
-      ],
+      "matchPackagePatterns": ["^@types/react$", "^next$", "^react$", "^typescript$"],
       "automerge": true
     },
     {
       "groupName": "npm auto-merge (testing)",
-      "matchPackagePatterns": [
-        "cypress",
-        "jest",
-        "testing-library"
-      ],
+      "matchPackagePatterns": ["cypress", "jest", "testing-library"],
       "automerge": true
     },
     {
@@ -68,25 +55,18 @@
         "^FluentAssertions$",
         "^NUnit$",
         "^NUnit3TestAdapter$",
-        "^coverlet\.collector$"
+        "^coverlet.collector$"
       ],
       "automerge": true
     },
     {
       "groupName": "GitHub Actions auto-merge",
-      "matchPackagePatterns": [
-        "^actions/setup-dotnet$",
-        "^codecov/codecov-action$"
-      ],
+      "matchPackagePatterns": ["^actions/setup-dotnet$", "^codecov/codecov-action$"],
       "automerge": true
     },
     {
       "groupName": "Disable Nx monorepos",
-      "matchPackagePatterns": [
-        "^nx$",
-        "^@nx\/",
-        "^@nrwl\/"
-      ],
+      "matchPackagePatterns": ["^nx$", "^@nx/", "^@nrwl/"],
       "enabled": false
     }
   ]

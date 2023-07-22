@@ -24,6 +24,7 @@
         "^@cspell\/dict",
         "^@eslint\/",
         "^@prettier\/",
+        "^@typescript-eslint\/",
         "^cspell$",
         "^eslint$",
         "^eslint-plugin",

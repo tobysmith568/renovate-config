@@ -72,7 +72,7 @@
     {
       "groupName": "npm: Next.JS",
       "matchManagers": ["npm"],
-      "matchPackageNames": ["next"],
+      "matchPackageNames": ["next", "@next/font"],
       "automerge": true
     },
     {

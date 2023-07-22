@@ -1,73 +1,166 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":disableDependencyDashboard", ":preserveSemverRanges"],
+  "extends": ["config:recommended"],
+  "dependencyDashboard": false,
+  "rangeStrategy": "replace",
   "automergeType": "branch",
-  "stabilityDays": 3,
+  "minimumReleaseAge": "3",
   "stopUpdatingLabel": "parked",
   "packageRules": [
+    // # Docker Base Images
+
     {
-      "groupName": "node",
-      "matchPackagePatterns": ["^@types/node$", "^node$"],
+      "groupName": "Docker: Node.JS",
+      "matchCategories": ["docker"],
+      "matchPackagePatterns": ["node"],
       "allowedVersions": "^18",
       "automerge": true
     },
+
+    // # npm Packages
+
+    // ## Types
+
     {
-      "groupName": "npm auto-merge (linting)",
-      "matchPackagePatterns": [
-        "^@.*?/prettier-plugin",
-        "^@.*?/eslint-plugin",
-        "^@.*?/eslint-config",
-        "^@cspell/dict",
-        "^@eslint/",
-        "^@prettier/",
-        "^@typescript-eslint/",
-        "^cspell$",
-        "^eslint$",
-        "^eslint-plugin",
-        "^eslint-config",
-        "^prettier$",
-        "^prettier-plugin"
-      ],
+      "groupName": "npm: Types",
+      "matchManagers": ["npm"],
+      "matchPackagePrefixes": ["@types/"],
       "automerge": true
     },
     {
-      "groupName": "npm auto-merge (development)",
-      "matchPackagePatterns": ["^@types/react$", "^next$", "^react$", "^typescript$"],
+      "groupName": "npm: Node.JS Types",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["@types/node"],
+      "allowedVersions": "^18",
+      "automerge": true
+    },
+
+    // ## Linting
+
+    {
+      "groupName": "npm: Prettier",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["prettier", "@tobysmith568/prettier-config"],
+      "matchPackagePrefixes": ["@prettier/"],
+      "matchPackagePatterns": ["prettier-plugin"],
       "automerge": true
     },
     {
-      "groupName": "npm auto-merge (testing)",
-      "matchPackagePatterns": ["cypress", "jest", "testing-library"],
+      "groupName": "npm: ESLint",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["eslint", "@tobysmith568/eslint-config"],
+      "matchPackagePrefixes": ["@eslint/", "@typescript-eslint/"],
+      "matchPackagePatterns": ["eslint-plugin", "eslint-config"],
       "automerge": true
     },
     {
-      "groupName": "NuGet auto-merge (Microsoft)",
-      "matchPackagePatterns": [
-        "^Microsoft\\.Extensions\\.",
-        "^Microsoft\\.AspNetCore\\.",
-        "Microsoft\\.NET\\.Test\\.Sdk"
-      ],
+      "groupName": "npm: CSpell",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["cspell"],
+      "matchPackagePrefixes": ["@cspell/"],
+      "automerge": true
+    },
+
+    // ## Development
+
+    {
+      "groupName": "npm: React",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["@types/react", "react"],
       "automerge": true
     },
     {
-      "groupName": "NuGet auto-merge (Testing)",
-      "matchPackagePatterns": [
-        "^FluentAssertions$",
-        "^NUnit$",
-        "^NUnit3TestAdapter$",
-        "^coverlet.collector$"
-      ],
+      "groupName": "npm: Next.JS",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["next"],
       "automerge": true
     },
     {
-      "groupName": "GitHub Actions auto-merge",
-      "matchPackagePatterns": ["^actions/setup-dotnet$", "^codecov/codecov-action$"],
+      "groupName": "npm: TypeScript",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["typescript"],
+      "automerge": true
+    },
+
+    // ## Testing
+
+    {
+      "groupName": "npm: Jest",
+      "matchManagers": ["npm"],
+      "matchPackagePatterns": ["jest"],
       "automerge": true
     },
     {
-      "groupName": "Disable Nx monorepos",
+      "groupName": "npm: Cypress",
+      "matchManagers": ["npm"],
+      "matchPackagePatterns": ["cypress"],
+      "automerge": true
+    },
+    {
+      "groupName": "npm: Testing Library",
+      "matchManagers": ["npm"],
+      "matchPackagePrefixes": ["@testing-library/"],
+      "automerge": true
+    },
+
+    // ## Other
+
+    {
+      "groupName": "npm: Disable Nx Monorepos",
+      "matchManagers": ["npm"],
       "matchPackagePatterns": ["^nx$", "^@nx/", "^@nrwl/"],
       "enabled": false
+    },
+
+    // # NuGet Packages
+
+    // ## Development
+
+    {
+      "groupName": "NuGet: Microsoft (Development)",
+      "matchManagers": ["nuget"],
+      "matchPackagePrefixes": ["Microsoft.Extensions.", "Microsoft.AspNetCore."],
+      "automerge": true
+    },
+
+    // ## Testing
+
+    {
+      "groupName": "Nuget: Microsoft (Testing)",
+      "matchManagers": ["nuget"],
+      "matchPackageNames": ["Microsoft.NET.Test.Sdk"],
+      "automerge": true
+    },
+    {
+      "groupName": "Nuget: NUnit",
+      "matchManagers": ["nuget"],
+      "matchPackageNames": ["NUnit", "NUnit3TestAdapter"],
+      "automerge": true
+    },
+    {
+      "groupName": "Nuget: FluentAssertions",
+      "matchManagers": ["nuget"],
+      "matchPackageNames": ["FluentAssertions"],
+      "automerge": true
+    },
+    {
+      "groupName": "Nuget: Coverlet",
+      "matchManagers": ["nuget"],
+      "matchPackageNames": ["coverlet.collector"],
+      "automerge": true
+    },
+
+    // # GitHub Actions
+
+    {
+      "groupName": "GitHub Actions: DotNet",
+      "matchPackageNames": ["actions/setup-dotnet"],
+      "automerge": true
+    },
+    {
+      "groupName": "GitHub Actions: Codecov",
+      "matchPackageNames": ["codecov/codecov-action"],
+      "automerge": true
     }
   ]
 }

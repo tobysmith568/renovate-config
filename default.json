@@ -162,6 +162,11 @@
       "groupName": "GitHub Actions: Codecov",
       "matchPackageNames": ["codecov/codecov-action"],
       "automerge": true
+    },
+    {
+      "groupName": "GitHub Actions: Setup Node",
+      "matchPackageNames": ["actions/setup-node"],
+      "automerge": true
     }
   ]
 }

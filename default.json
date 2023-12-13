@@ -167,6 +167,11 @@
       "groupName": "GitHub Actions: Setup Node",
       "matchPackageNames": ["actions/setup-node"],
       "automerge": true
+    },
+    {
+      "groupName": "GitHub Actions: CodeQL",
+      "matchPackageNames": ["github/codeql-action"],
+      "automerge": true
     }
   ]
 }

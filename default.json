@@ -154,18 +154,28 @@
     // # GitHub Actions
 
     {
+      "groupName": "GitHub Actions: Download Artifact",
+      "matchPackageNames": ["actions/download-artifact"],
+      "automerge": true
+    },
+    {
       "groupName": "GitHub Actions: DotNet",
       "matchPackageNames": ["actions/setup-dotnet"],
       "automerge": true
     },
     {
-      "groupName": "GitHub Actions: Codecov",
-      "matchPackageNames": ["codecov/codecov-action"],
+      "groupName": "GitHub Actions: Setup Node",
+      "matchPackageNames": ["actions/setup-node"],
       "automerge": true
     },
     {
-      "groupName": "GitHub Actions: Setup Node",
-      "matchPackageNames": ["actions/setup-node"],
+      "groupName": "GitHub Actions: Upload Artifact",
+      "matchPackageNames": ["actions/upload-artifact"],
+      "automerge": true
+    },
+    {
+      "groupName": "GitHub Actions: Codecov",
+      "matchPackageNames": ["codecov/codecov-action"],
       "automerge": true
     },
     {

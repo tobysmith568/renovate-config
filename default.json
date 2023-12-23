@@ -179,6 +179,11 @@
       "automerge": true
     },
     {
+      "groupName": "GitHub Actions: Upload Pages Artifact",
+      "matchPackageNames": ["actions/upload-pages-artifact"],
+      "automerge": true
+    },
+    {
       "groupName": "GitHub Actions: Codecov",
       "matchPackageNames": ["codecov/codecov-action"],
       "automerge": true

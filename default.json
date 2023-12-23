@@ -159,6 +159,11 @@
       "automerge": true
     },
     {
+      "groupName": "GitHub Actions: Deploy Pages",
+      "matchPackageNames": ["actions/deploy-pages"],
+      "automerge": true
+    },
+    {
       "groupName": "GitHub Actions: DotNet",
       "matchPackageNames": ["actions/setup-dotnet"],
       "automerge": true

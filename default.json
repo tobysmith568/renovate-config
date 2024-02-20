@@ -82,6 +82,11 @@
       "matchPackageNames": ["typescript"],
       "automerge": true
     },
+    {
+      "groupName": "npm: Commander",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["commander", "@commander-js/extra-typings"]
+    },
 
     // ## Testing
 

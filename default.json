@@ -165,6 +165,11 @@
     // # GitHub Actions
 
     {
+      "groupName": "GitHub Actions: Checkout",
+      "matchPackageNames": ["actions/checkout"],
+      "automerge": true
+    },
+    {
       "groupName": "GitHub Actions: Download Artifact",
       "matchPackageNames": ["actions/download-artifact"],
       "automerge": true

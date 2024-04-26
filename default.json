@@ -67,7 +67,7 @@
     {
       "groupName": "npm: React",
       "matchManagers": ["npm"],
-      "matchPackageNames": ["@types/react", "react"],
+      "matchPackageNames": ["@types/react", "@types/react-dom", "react", "react-dom"],
       "automerge": true
     },
     {

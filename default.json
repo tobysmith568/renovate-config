@@ -7,6 +7,7 @@
   "automergeType": "branch",
   "minimumReleaseAge": "3",
   "stopUpdatingLabel": "parked",
+  "semanticCommits": "disabled",
   "packageRules": [
     // # Docker Base Images
 

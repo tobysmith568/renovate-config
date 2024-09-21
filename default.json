@@ -18,6 +18,16 @@
       "allowedVersions": "^18",
       "automerge": true
     },
+    
+    // # Package Managers
+
+    {
+      "groupName": "Package Managers",
+      "matchManagers": ["npm"],
+      "matchPackagePatterns": ["^pnpm$"],
+      "allowedVersions": "^9",
+      "automerge": true
+    },
 
     // # npm Packages
 

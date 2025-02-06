@@ -25,7 +25,7 @@
       "groupName": "Package Managers",
       "matchManagers": ["npm"],
       "matchPackagePatterns": ["^pnpm$"],
-      "allowedVersions": "^9",
+      "allowedVersions": "^10",
       "automerge": true
     },
 

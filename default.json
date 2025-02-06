@@ -125,6 +125,12 @@
       "matchPackagePrefixes": ["@testing-library/"],
       "automerge": true
     },
+    {
+      "groupName": "npm: Vitest",
+      "matchManagers": ["npm"],
+      "matchPackagePatterns": ["vitest"],
+      "automerge": true
+    },
 
     // ## Other
 

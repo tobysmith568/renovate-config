@@ -104,6 +104,11 @@
       "matchManagers": ["npm"],
       "matchPackageNames": ["commander", "@commander-js/extra-typings"]
     },
+    {
+      "groupName": "npm: Rollup",
+      "matchManagers": ["npm"],
+      "matchPackagePatterns": ["^rollup$", "^@rollup/", "rollup-plugin"],
+    },
 
     // ## Testing
 

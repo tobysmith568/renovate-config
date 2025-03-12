@@ -15,7 +15,7 @@
       "groupName": "Docker: Node.JS",
       "matchCategories": ["docker"],
       "matchPackagePatterns": ["node"],
-      "allowedVersions": "^18",
+      "allowedVersions": "^22",
       "automerge": true
     },
     

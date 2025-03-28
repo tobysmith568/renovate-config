@@ -43,7 +43,7 @@
       "groupName": "npm: Node.JS Types",
       "matchManagers": ["npm"],
       "matchPackageNames": ["@types/node"],
-      "allowedVersions": "^18",
+      "allowedVersions": "^22",
       "automerge": true
     },
 

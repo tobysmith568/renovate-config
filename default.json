@@ -109,12 +109,14 @@
     {
       "groupName": "npm: Commander",
       "matchManagers": ["npm"],
-      "matchPackageNames": ["commander", "@commander-js/extra-typings"]
+      "matchPackageNames": ["commander", "@commander-js/extra-typings"],
+      "automerge": false
     },
     {
       "groupName": "npm: Rollup",
       "matchManagers": ["npm"],
-      "matchPackageNames": ["rollup", "@rollup/**", "/rollup-plugin/"]
+      "matchPackageNames": ["rollup", "@rollup/**", "/rollup-plugin/"],
+      "automerge": false
     },
 
     // ## Testing

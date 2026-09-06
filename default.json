@@ -82,17 +82,17 @@
 
     // ## Development
 
+    // React and Next.JS ship to users at runtime, where a green CI run does not
+    // prove a minor bump is safe, so they always get a PR to review.
     {
       "groupName": "npm: React",
       "matchManagers": ["npm"],
-      "matchPackageNames": ["@types/react", "@types/react-dom", "react", "react-dom"],
-      "automerge": true
+      "matchPackageNames": ["@types/react", "@types/react-dom", "react", "react-dom"]
     },
     {
       "groupName": "npm: Next.JS",
       "matchManagers": ["npm"],
-      "matchPackageNames": ["next", "@next/font"],
-      "automerge": true
+      "matchPackageNames": ["next", "@next/font"]
     },
     {
       "groupName": "npm: TypeScript",
@@ -237,6 +237,16 @@
       "groupName": "GitHub Actions: CodeQL",
       "matchPackageNames": ["github/codeql-action"],
       "automerge": true
+    },
+
+    // # Global Overrides
+
+    // Major updates always get a PR, regardless of any automerge rule above.
+    // Minor/patch/digest updates for the packages listed above still branch-automerge
+    // once their checks go green.
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false
     }
   ]
 }

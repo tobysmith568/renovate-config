@@ -18,7 +18,7 @@
       "allowedVersions": "^24",
       "automerge": true
     },
-    
+
     // # Package Managers
 
     {
@@ -107,7 +107,7 @@
     {
       "groupName": "npm: Rollup",
       "matchManagers": ["npm"],
-      "matchPackagePatterns": ["^rollup$", "^@rollup/", "rollup-plugin"],
+      "matchPackagePatterns": ["^rollup$", "^@rollup/", "rollup-plugin"]
     },
 
     // ## Testing

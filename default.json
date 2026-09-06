@@ -5,7 +5,7 @@
   "dependencyDashboard": false,
   "rangeStrategy": "replace",
   "automergeType": "branch",
-  "minimumReleaseAge": "3",
+  "minimumReleaseAge": "3 days",
   "stopUpdatingLabel": "parked",
   "semanticCommits": "disabled",
   "packageRules": [
@@ -14,7 +14,7 @@
     {
       "groupName": "Docker: Node.JS",
       "matchCategories": ["docker"],
-      "matchPackagePatterns": ["node"],
+      "matchPackageNames": ["node", "docker.io/library/node", "**/node"],
       "allowedVersions": "^24",
       "automerge": true
     },
@@ -24,7 +24,7 @@
     {
       "groupName": "Package Managers",
       "matchManagers": ["npm"],
-      "matchPackagePatterns": ["^pnpm$"],
+      "matchPackageNames": ["pnpm"],
       "allowedVersions": "^10",
       "automerge": true
     },
@@ -36,7 +36,7 @@
     {
       "groupName": "npm: Types",
       "matchManagers": ["npm"],
-      "matchPackagePrefixes": ["@types/"],
+      "matchPackageNames": ["@types/**"],
       "automerge": true
     },
     {
@@ -52,24 +52,31 @@
     {
       "groupName": "npm: Prettier",
       "matchManagers": ["npm"],
-      "matchPackageNames": ["prettier", "@tobysmith568/prettier-config"],
-      "matchPackagePrefixes": ["@prettier/"],
-      "matchPackagePatterns": ["prettier-plugin"],
+      "matchPackageNames": [
+        "prettier",
+        "@tobysmith568/prettier-config",
+        "@prettier/**",
+        "/prettier-plugin/"
+      ],
       "automerge": true
     },
     {
       "groupName": "npm: ESLint",
       "matchManagers": ["npm"],
-      "matchPackageNames": ["eslint", "@tobysmith568/eslint-config"],
-      "matchPackagePrefixes": ["@eslint/", "@typescript-eslint/"],
-      "matchPackagePatterns": ["eslint-plugin", "eslint-config"],
+      "matchPackageNames": [
+        "eslint",
+        "@tobysmith568/eslint-config",
+        "@eslint/**",
+        "@typescript-eslint/**",
+        "/eslint-plugin/",
+        "/eslint-config/"
+      ],
       "automerge": true
     },
     {
       "groupName": "npm: CSpell",
       "matchManagers": ["npm"],
-      "matchPackageNames": ["cspell"],
-      "matchPackagePrefixes": ["@cspell/"],
+      "matchPackageNames": ["cspell", "@cspell/**"],
       "automerge": true
     },
 
@@ -96,7 +103,7 @@
     {
       "groupName": "npm: SWC",
       "matchManagers": ["npm"],
-      "matchPackagePrefixes": ["@swc/"],
+      "matchPackageNames": ["@swc/**"],
       "automerge": true
     },
     {
@@ -107,7 +114,7 @@
     {
       "groupName": "npm: Rollup",
       "matchManagers": ["npm"],
-      "matchPackagePatterns": ["^rollup$", "^@rollup/", "rollup-plugin"]
+      "matchPackageNames": ["rollup", "@rollup/**", "/rollup-plugin/"]
     },
 
     // ## Testing
@@ -115,25 +122,25 @@
     {
       "groupName": "npm: Jest",
       "matchManagers": ["npm"],
-      "matchPackagePatterns": ["jest"],
+      "matchPackageNames": ["jest", "jest-*", "@jest/**", "ts-jest", "babel-jest", "@types/jest"],
       "automerge": true
     },
     {
       "groupName": "npm: Cypress",
       "matchManagers": ["npm"],
-      "matchPackagePatterns": ["cypress"],
+      "matchPackageNames": ["cypress", "cypress-*", "@cypress/**", "@types/cypress"],
       "automerge": true
     },
     {
       "groupName": "npm: Testing Library",
       "matchManagers": ["npm"],
-      "matchPackagePrefixes": ["@testing-library/"],
+      "matchPackageNames": ["@testing-library/**"],
       "automerge": true
     },
     {
       "groupName": "npm: Vitest",
       "matchManagers": ["npm"],
-      "matchPackagePatterns": ["vitest"],
+      "matchPackageNames": ["vitest", "vitest-*", "@vitest/**"],
       "automerge": true
     },
 
@@ -142,7 +149,7 @@
     {
       "groupName": "npm: Disable Nx Monorepos",
       "matchManagers": ["npm"],
-      "matchPackagePatterns": ["^nx$", "^@nx/", "^@nrwl/"],
+      "matchPackageNames": ["nx", "@nx/**", "@nrwl/**"],
       "enabled": false
     },
 
@@ -153,7 +160,7 @@
     {
       "groupName": "NuGet: Microsoft (Development)",
       "matchManagers": ["nuget"],
-      "matchPackagePrefixes": ["Microsoft.Extensions.", "Microsoft.AspNetCore."],
+      "matchPackageNames": ["Microsoft.Extensions.*", "Microsoft.AspNetCore.*"],
       "automerge": true
     },
 

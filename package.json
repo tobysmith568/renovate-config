@@ -24,7 +24,6 @@
     "url": "https://github.com/tobysmith568/renovate-config/issues"
   },
   "devDependencies": {
-    "@tobysmith568/prettier-config": "^2.0.0",
-    "cspell": "^10.0.0"
+    "@tobysmith568/prettier-config": "^2.0.0"
   }
 }

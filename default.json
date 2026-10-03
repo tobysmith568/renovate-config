@@ -100,6 +100,12 @@
       "matchPackageNames": ["oxlint", "oxfmt", "@oxlint/**"],
       "automerge": true
     },
+    {
+      "groupName": "npm: License Cop",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["license-cop", "@license-cop/**"],
+      "automerge": true
+    },
 
     // ## Development
 

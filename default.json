@@ -23,7 +23,7 @@
 
     {
       "groupName": "Package Managers",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["pnpm"],
       "allowedVersions": "^10",
       "automerge": true
@@ -35,13 +35,13 @@
 
     {
       "groupName": "npm: Types",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["@types/**"],
       "automerge": true
     },
     {
       "groupName": "npm: Node.JS Types",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["@types/node"],
       "allowedVersions": "^24",
       "automerge": true
@@ -51,7 +51,7 @@
 
     {
       "groupName": "npm: Bun",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["bun", "bun-types", "@types/bun"],
       "automerge": true
     },
@@ -60,7 +60,7 @@
 
     {
       "groupName": "npm: Prettier",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": [
         "prettier",
         "@tobysmith568/prettier-config",
@@ -71,7 +71,7 @@
     },
     {
       "groupName": "npm: ESLint",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": [
         "eslint",
         "@tobysmith568/eslint-config",
@@ -84,25 +84,25 @@
     },
     {
       "groupName": "npm: CSpell",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["cspell", "@cspell/**"],
       "automerge": true
     },
     {
       "groupName": "npm: Biome",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["@biomejs/**"],
       "automerge": true
     },
     {
       "groupName": "npm: Oxlint & Oxfmt",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["oxlint", "oxfmt", "@oxlint/**"],
       "automerge": true
     },
     {
       "groupName": "npm: License Cop",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["license-cop", "@license-cop/**"],
       "automerge": true
     },
@@ -113,37 +113,37 @@
     // prove a minor bump is safe, so they always get a PR to review.
     {
       "groupName": "npm: React",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["@types/react", "@types/react-dom", "react", "react-dom"]
     },
     {
       "groupName": "npm: Next.JS",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["next", "@next/font"]
     },
     {
       "description": "TypeScript 7.0.x is skipped: it has no compiler API yet, so tooling relying on it would break.",
       "groupName": "npm: TypeScript",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["typescript"],
       "allowedVersions": "!/^7\\.0\\./",
       "automerge": true
     },
     {
       "groupName": "npm: SWC",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["@swc/**"],
       "automerge": true
     },
     {
       "groupName": "npm: Commander",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["commander", "@commander-js/extra-typings"],
       "automerge": false
     },
     {
       "groupName": "npm: Rollup",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["rollup", "@rollup/**", "/rollup-plugin/"],
       "automerge": false
     },
@@ -152,31 +152,31 @@
 
     {
       "groupName": "npm: Jest",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["jest", "jest-*", "@jest/**", "ts-jest", "babel-jest", "@types/jest"],
       "automerge": true
     },
     {
       "groupName": "npm: Cypress",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["cypress", "cypress-*", "@cypress/**", "@types/cypress"],
       "automerge": true
     },
     {
       "groupName": "npm: Testing Library",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["@testing-library/**"],
       "automerge": true
     },
     {
       "groupName": "npm: Vitest",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["vitest", "vitest-*", "@vitest/**"],
       "automerge": true
     },
     {
       "groupName": "npm: Playwright",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["playwright", "playwright-core", "@playwright/**"],
       "automerge": true
     },
@@ -185,7 +185,7 @@
 
     {
       "groupName": "npm: Disable Nx Monorepos",
-      "matchManagers": ["npm"],
+      "matchManagers": ["npm", "bun"],
       "matchPackageNames": ["nx", "@nx/**", "@nrwl/**"],
       "enabled": false
     },

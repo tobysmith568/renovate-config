@@ -19,6 +19,15 @@
       "automerge": true
     },
 
+    // # Node.JS Version Files
+
+    {
+      "groupName": "Node.JS Version Files",
+      "matchManagers": ["node-version", "nvm"],
+      "allowedVersions": "^24",
+      "automerge": true
+    },
+
     // # Package Managers
 
     {

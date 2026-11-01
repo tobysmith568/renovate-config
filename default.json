@@ -9,21 +9,12 @@
   "stopUpdatingLabel": "parked",
   "semanticCommits": "disabled",
   "packageRules": [
-    // # Docker Base Images
+    // # Node.JS (Docker base images and version files)
 
     {
-      "groupName": "Docker: Node.JS",
-      "matchCategories": ["docker"],
+      "groupName": "Node.JS",
+      "matchDatasources": ["docker", "node-version"],
       "matchPackageNames": ["node", "docker.io/library/node", "**/node"],
-      "allowedVersions": "^24",
-      "automerge": true
-    },
-
-    // # Node.JS Version Files
-
-    {
-      "groupName": "Node.JS Version Files",
-      "matchManagers": ["node-version", "nvm"],
       "allowedVersions": "^24",
       "automerge": true
     },

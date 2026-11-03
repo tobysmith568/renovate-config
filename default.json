@@ -15,7 +15,7 @@
       "groupName": "Node.JS",
       "matchDatasources": ["docker", "node-version", "github-releases"],
       "matchPackageNames": ["node", "docker.io/library/node", "**/node"],
-      "allowedVersions": "^24",
+      "allowedVersions": "^26",
       "automerge": true
     },
 
